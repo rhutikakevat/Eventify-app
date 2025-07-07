@@ -94,7 +94,7 @@ export default function AddEvent() {
 
             setTimeout(() => {
                 setSuccessMessage("");
-            }, 3000);
+            }, 2000);
             }
         }
     } catch (error) {
