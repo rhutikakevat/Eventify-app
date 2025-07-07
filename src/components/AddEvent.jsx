@@ -278,7 +278,7 @@ export default function AddEvent() {
                                     name="locationCity"
                                     value={formData.locationCity}
                                     onChange={handleChange}
-                                  
+                                  required
                                 />
                             </div>
                             <div className="col-md-6">
@@ -290,7 +290,7 @@ export default function AddEvent() {
                                     name="locationAddress"
                                     value={formData.locationAddress}
                                     onChange={handleChange}
-                                    
+                                    required
                                 />
                             </div>
                         </div>
