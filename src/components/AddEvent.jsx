@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import Header from "./Header";
 import { FaPaperPlane } from "react-icons/fa";
 import Footer from "./Footer";
@@ -22,6 +23,7 @@ export default function AddEvent() {
         speakers: [{ name: "", profileImage: "", role: "" }]
     });
     const [successMessage, setSuccessMessage] = useState("");
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -94,7 +96,7 @@ export default function AddEvent() {
 
             setTimeout(() => {
                 setSuccessMessage("");
-            }, 5000);
+            }, 2000);
             }
         }
     } catch (error) {
