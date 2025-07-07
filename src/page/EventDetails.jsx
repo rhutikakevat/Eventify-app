@@ -56,7 +56,7 @@ const EventDetails = () =>{
            </div>
             : (
                 <div>
-                 {deleteSuccess && <p className="fs-4 fw-semibold text-center py-4">Event deleted successfully.</p>}
+                 {deleteSuccess && <p className="fs-4 fw-semibold py-2">Event deleted successfully.</p>}
 
                  {eventData ? (
                 <div className="row">

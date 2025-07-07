@@ -280,7 +280,7 @@ export default function AddEvent() {
                                     name="locationCity"
                                     value={formData.locationCity}
                                     onChange={handleChange}
-                                    required 
+                                  required
                                 />
                             </div>
                             <div className="col-md-6">
