@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import Header from "../components/Header";
 import useFetch from "../useFetch";
 import { IoLocationSharp } from "react-icons/io5";
@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 
 const EventDetails = () =>{
     const [deleteSuccess, setDeleteSuccess] = useState(false);
+    const navigate = useNavigate()
     const {data,loading,error} = useFetch("https://eventify-app-backend.vercel.app/events")
     // console.log(data);
 
@@ -35,6 +36,7 @@ const EventDetails = () =>{
 
                 if(data){
                     setDeleteSuccess(true);
+                    setTimeout(()=> {navigate("/")},2000)
                 }
             }
             
@@ -55,7 +57,7 @@ const EventDetails = () =>{
             : (
                 <div>
                  {deleteSuccess && <p className="fs-4 fw-semibold text-center py-4">Event deleted successfully.</p>}
-                 
+
                  {eventData ? (
                 <div className="row">
                     <div className="col-md-8 pe-5">
