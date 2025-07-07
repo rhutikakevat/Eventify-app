@@ -35,9 +35,6 @@ const EventDetails = () =>{
 
                 if(data){
                     setDeleteSuccess(true);
-                    setTimeout(()=>{
-                         window.location.reload();
-                    },3000)
                 }
             }
             
@@ -57,7 +54,8 @@ const EventDetails = () =>{
            </div>
             : (
                 <div>
-               
+                 {deleteSuccess && <p className="fs-4 fw-semibold text-center py-4">Event deleted successfully.</p>}
+                 
                  {eventData ? (
                 <div className="row">
                     <div className="col-md-8 pe-5">
@@ -152,7 +150,7 @@ const EventDetails = () =>{
                                 <button onClick={()=>handleDelete(eventData._id)} className="btn btn-danger mt-3 py-2 fs-5 fw-bold">Delete <RiDeleteBin4Fill/></button>
                             </div>
 
-                             {deleteSuccess && <p className="fs-4 fw-semibold text-center py-4">Event deleted successfully.</p>}
+                            
                         </div>
                      </div>
                 </div>
